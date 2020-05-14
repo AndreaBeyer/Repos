@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F70C0174-3199-44D0-B525-3EC25F387BD4}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>ToutEmbal__</RootNamespace>
+    <AssemblyName>ToutEmbal++</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FormProd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormProd.Designer.cs">
+      <DependentUpon>FormProd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FormProd.resx">
+      <DependentUpon>FormProd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="FormDiagramme.cd" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Alea\Alea.csproj">
+      <Project>{14fd68ce-003b-45c2-b9b6-1018a75c9c24}</Project>
+      <Name>Alea</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BControlUtilisateursProduction\BControlUtilisateursProduction.csproj">
+      <Project>{f732e267-b161-4e30-b186-3f6ea1044241}</Project>
+      <Name>BControlUtilisateursProduction</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ClassLibrarySerialization\ClassLibrarySerialization.csproj">
+      <Project>{9cc020e2-5e89-41c3-bbd9-1ca4f989a7a7}</Project>
+      <Name>ClassLibrarySerialization</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ClassLibraryXMLSerialization\ClassLibraryXMLSerialization.csproj">
+      <Project>{d5514b05-48f0-4160-a95d-baa24a9f4e81}</Project>
+      <Name>ClassLibraryXMLSerialization</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Horloge\LibraryHorloge.csproj">
+      <Project>{050CD011-B6EC-4AA8-9424-1BA63C5D19EA}</Project>
+      <Name>LibraryHorloge</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Production\ProductionCaisses.csproj">
+      <Project>{98d1d526-f26c-434f-9ef8-f473388797c5}</Project>
+      <Name>ProductionCaisses</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

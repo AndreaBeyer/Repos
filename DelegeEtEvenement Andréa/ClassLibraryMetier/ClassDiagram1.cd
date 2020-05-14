@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
+  <Class Name="ClassLibraryMetier.Meteo">
+    <Position X="1" Y="0.75" Width="3.5" />
+    <NestedTypes>
+      <Delegate Name="ClassLibraryMetier.Meteo.MonDelegatePourLeSoleilVientDapparaitre" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Meteo.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Delegate>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AQAAAAFAAAAAAAAAEAAAAAAAAAAAAAAAAAQAAAAAAAA=</HashCode>
+      <FileName>Meteo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="ClassLibraryMetier.EnumTemps">
+    <Position X="5.75" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAQgAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAA=</HashCode>
+      <FileName>EnumTemps.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

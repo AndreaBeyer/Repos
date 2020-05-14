@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Personnes\Personnes.csproj" />
+    <ProjectReference Include="..\VerificationForm\VerificationForm.csproj" />
+  </ItemGroup>
+
+</Project>

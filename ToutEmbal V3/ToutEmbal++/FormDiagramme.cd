@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
+  <Class Name="ToutEmbal__.FormProd">
+    <Position X="1.5" Y="0.5" Width="4.5" />
+    <Compartments>
+      <Compartment Name="Nested Types" Collapsed="false" />
+    </Compartments>
+    <NestedTypes>
+      <Delegate Name="ToutEmbal__.FormProd.UpdateIHMDelegateHandle" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>FormProd.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Delegate>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AgIExEAEAmECQABoBACAAABGAAgACAgIAIAIRUqAEAA=</HashCode>
+      <FileName>FormProd.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

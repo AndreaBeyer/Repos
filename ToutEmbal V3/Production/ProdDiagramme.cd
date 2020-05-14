@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
+  <Class Name="ProductionCaisses.Production">
+    <Position X="2.5" Y="0.5" Width="4.75" />
+    <Compartments>
+      <Compartment Name="Nested Types" Collapsed="false" />
+    </Compartments>
+    <NestedTypes>
+      <Delegate Name="ProductionCaisses.Production.LaProductionAReussie" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Production.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Delegate>
+      <Delegate Name="ProductionCaisses.Production.UneErreurEstApparue" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Production.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Delegate>
+      <Delegate Name="ProductionCaisses.Production.LEtatDeLaProdAChange" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Production.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Delegate>
+    </NestedTypes>
+    <AssociationLine Name="etatCourantDeLaProduction" Type="ProductionCaisses.EnumEtatProduction">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="1.11" Y="0.07" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AACA0UBAAAAgAAAQAAAACAACEAAFCACcASAAIAAABAA=</HashCode>
+      <FileName>Production.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="etatCourantDeLaProduction" />
+    </ShowAsAssociation>
+  </Class>
+  <Enum Name="ProductionCaisses.EnumEtatProduction">
+    <Position X="11.25" Y="1.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAABAAAAAAAIAAAQAAAAAAAAAAEAAAAAAAAAAA=</HashCode>
+      <FileName>EnumEtatProduction.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
