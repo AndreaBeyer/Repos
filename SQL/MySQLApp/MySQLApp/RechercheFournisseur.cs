@@ -57,6 +57,7 @@ namespace MySQLApp
                 else
                 {
                     MessageBox.Show("Le code fournisseur est inexistant", "Attention", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    sqlDataReader.Close();
                 }
             }
             catch

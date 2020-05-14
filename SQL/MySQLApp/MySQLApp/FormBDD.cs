@@ -102,8 +102,11 @@ namespace MySQLApp
 
         private void buttonCommandes_Click(object sender, EventArgs e)
         {
-            ListeCommandes listeCommandes = new ListeCommandes(sqlConnection);
-            listeCommandes.Show();
+            if(sqlConnection != null)
+            {
+                ListeCommandes listeCommandes = new ListeCommandes(sqlConnection);
+                listeCommandes.Show();
+            }
         }
 
         private void buttonCreation_Click(object sender, EventArgs e)

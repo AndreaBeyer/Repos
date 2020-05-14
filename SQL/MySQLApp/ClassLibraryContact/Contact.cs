@@ -139,5 +139,108 @@ namespace ClassLibraryContact
             }
             return success;
         }
+
+        public static bool Supress(int id, SqlConnection bdd)
+        {
+            bool success = false;
+
+            SqlCommand sqlCommand, sqlCommand1, sqlCommand2, sqlCommand3, sqlCommand4, sqlCommand5;
+            SqlParameter pCodeFournisseur, pCodeCommande;
+
+
+            try
+            {
+                pCodeFournisseur = new SqlParameter("@pid_contact", SqlDbType.Int);
+                pCodeFournisseur.Value = id;
+
+                sqlCommand2 = new SqlCommand();
+                sqlCommand2.Connection = bdd;
+                sqlCommand2.CommandText = "DELETE FROM VENTE WHERE id_contact = @pid_contact";
+                sqlCommand2.Parameters.Add(pCodeFournisseur);
+
+                sqlCommand2.ExecuteNonQuery();
+
+                sqlCommand2.Parameters.Clear();
+
+                pCodeFournisseur = new SqlParameter("@pid_contact", SqlDbType.Int);
+                pCodeFournisseur.Value = id;
+
+                sqlCommand4 = new SqlCommand();
+                sqlCommand4.Connection = bdd;
+                sqlCommand4.CommandText = "Select id_commande FROM COMMANDE WHERE id_contact = @pid_contact";
+                sqlCommand4.Parameters.Add(pCodeFournisseur);
+
+                SqlDataReader sqlDataReader = sqlCommand4.ExecuteReader();
+
+                sqlCommand4.Parameters.Clear();
+
+
+                int i = 0;
+
+                List<int> myList = new List<int>();
+
+                while (sqlDataReader.Read())
+                {
+                    myList.Add(sqlDataReader.GetInt32(i));
+                    i++;
+                }
+                sqlDataReader.Close();
+
+                foreach (int id_comm in myList)
+                {
+                    pCodeFournisseur = new SqlParameter("@pid_comm", SqlDbType.Int);
+                    pCodeFournisseur.Value = id_comm;
+
+                    sqlCommand5 = new SqlCommand();
+                    sqlCommand5.Connection = bdd;
+                    sqlCommand5.CommandText = "DELETE FROM Ligne_commande WHERE id_commande = @pid_comm";
+                    sqlCommand5.Parameters.Add(pCodeFournisseur);
+
+                    sqlCommand5.ExecuteNonQuery();
+                    sqlCommand5.Parameters.Clear();
+                }
+
+                pCodeFournisseur = new SqlParameter("@pid_contact", SqlDbType.Int);
+                pCodeFournisseur.Value = id;
+
+                sqlCommand = new SqlCommand();
+                sqlCommand.Connection = bdd;
+                sqlCommand.CommandText = "DELETE FROM COMMANDE WHERE id_contact = @pid_contact";
+                sqlCommand.Parameters.Add(pCodeFournisseur);
+
+                int nb = sqlCommand.ExecuteNonQuery();
+
+                sqlCommand.Parameters.Clear();
+
+                pCodeFournisseur = new SqlParameter("@pid_contact", SqlDbType.Int);
+                pCodeFournisseur.Value = id;
+
+                sqlCommand1 = new SqlCommand();
+                sqlCommand1.Connection = bdd;
+                sqlCommand1.CommandText = "DELETE FROM CONTACT WHERE id_contact = @pid_contact";
+                sqlCommand1.Parameters.Add(pCodeFournisseur);
+
+                int nb1 = sqlCommand1.ExecuteNonQuery();
+                sqlCommand1.Parameters.Clear();
+
+                pCodeCommande = new SqlParameter("@pid_commande", SqlDbType.Int);
+                pCodeCommande.Value = id;
+
+                sqlCommand3 = new SqlCommand();
+                sqlCommand3.Connection = bdd;
+                sqlCommand3.CommandText = "DELETE FROM ligne_commande WHERE id_commande = @pid_commande";
+                sqlCommand3.Parameters.Add(pCodeCommande);
+
+                int nb4 = sqlCommand3.ExecuteNonQuery();
+                sqlCommand3.Parameters.Clear();
+                success = true;
+            }
+            catch(Exception e)
+            {
+                Trace.TraceError(DateTime.Now + " Echec de la supression du contact " + id + " " + e.Message);
+            }
+
+            return success;
+        }
     }
 }

@@ -42,9 +42,21 @@ namespace MySQLApp
 
         private void comboBoxFournisseurs_SelectedIndexChanged(object sender, EventArgs e)
         {
+            listBoxCommandes.Items.Clear();
+
             SqlCommand sqlCommand = new SqlCommand();
             sqlCommand.Connection = this.sqlConnection;
-            sqlCommand.CommandText = "select id_commande, date_commande, obs_commande From Commande";
+
+            SqlParameter pCodeFournisseur = new SqlParameter("@pid_contact", SqlDbType.Int);
+
+            int selectedIndex = comboBoxFournisseurs.SelectedIndex;
+
+            pCodeFournisseur.Value = (int)comboBoxFournisseurs.Items[selectedIndex];
+
+
+            sqlCommand.Parameters.Add(pCodeFournisseur);
+
+            sqlCommand.CommandText = "select id_commande, date_commande, obs_commande From Commande, Contact where Commande.id_contact = @pid_contact";
 
             SqlDataReader sqlDataReader = sqlCommand.ExecuteReader();
 
