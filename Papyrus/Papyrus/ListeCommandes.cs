@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ClassLibraryPersistanceSqlServer;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -9,11 +10,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace MySQLApp
+namespace Papyrus
 {
     public partial class ListeCommandes : Form
     {
         private SqlConnection sqlConnection;
+
+        private PersitanceContact persitanceContact;
         public ListeCommandes(SqlConnection sqlConnection)
         {
             InitializeComponent();

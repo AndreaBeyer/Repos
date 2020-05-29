@@ -56,35 +56,35 @@
             this.textBoxVille.Location = new System.Drawing.Point(268, 127);
             this.textBoxVille.Name = "textBoxVille";
             this.textBoxVille.Size = new System.Drawing.Size(100, 20);
-            this.textBoxVille.TabIndex = 1;
+            this.textBoxVille.TabIndex = 4;
             // 
             // textBoxSatisfaction
             // 
             this.textBoxSatisfaction.Location = new System.Drawing.Point(198, 205);
             this.textBoxSatisfaction.Name = "textBoxSatisfaction";
             this.textBoxSatisfaction.Size = new System.Drawing.Size(37, 20);
-            this.textBoxSatisfaction.TabIndex = 2;
+            this.textBoxSatisfaction.TabIndex = 6;
             // 
             // textBoxContact
             // 
             this.textBoxContact.Location = new System.Drawing.Point(198, 166);
             this.textBoxContact.Name = "textBoxContact";
             this.textBoxContact.Size = new System.Drawing.Size(170, 20);
-            this.textBoxContact.TabIndex = 3;
+            this.textBoxContact.TabIndex = 5;
             // 
             // textBoxCP
             // 
             this.textBoxCP.Location = new System.Drawing.Point(198, 127);
             this.textBoxCP.Name = "textBoxCP";
             this.textBoxCP.Size = new System.Drawing.Size(64, 20);
-            this.textBoxCP.TabIndex = 4;
+            this.textBoxCP.TabIndex = 3;
             // 
             // textBoxAdresse
             // 
             this.textBoxAdresse.Location = new System.Drawing.Point(236, 83);
             this.textBoxAdresse.Name = "textBoxAdresse";
             this.textBoxAdresse.Size = new System.Drawing.Size(132, 20);
-            this.textBoxAdresse.TabIndex = 5;
+            this.textBoxAdresse.TabIndex = 2;
             // 
             // label1
             // 
@@ -136,7 +136,7 @@
             this.buttonRetour.Location = new System.Drawing.Point(293, 266);
             this.buttonRetour.Name = "buttonRetour";
             this.buttonRetour.Size = new System.Drawing.Size(75, 23);
-            this.buttonRetour.TabIndex = 11;
+            this.buttonRetour.TabIndex = 8;
             this.buttonRetour.Text = "Retour";
             this.buttonRetour.UseVisualStyleBackColor = true;
             this.buttonRetour.Click += new System.EventHandler(this.buttonRetour_Click);
@@ -146,7 +146,7 @@
             this.buttonMAJ.Location = new System.Drawing.Point(187, 266);
             this.buttonMAJ.Name = "buttonMAJ";
             this.buttonMAJ.Size = new System.Drawing.Size(75, 23);
-            this.buttonMAJ.TabIndex = 12;
+            this.buttonMAJ.TabIndex = 7;
             this.buttonMAJ.Text = "MAJ";
             this.buttonMAJ.UseVisualStyleBackColor = true;
             this.buttonMAJ.Click += new System.EventHandler(this.buttonMAJ_Click);
@@ -156,7 +156,7 @@
             this.textBoxNumRue.Location = new System.Drawing.Point(198, 83);
             this.textBoxNumRue.Name = "textBoxNumRue";
             this.textBoxNumRue.Size = new System.Drawing.Size(32, 20);
-            this.textBoxNumRue.TabIndex = 13;
+            this.textBoxNumRue.TabIndex = 1;
             // 
             // AffichageFournisseur
             // 
