@@ -29,6 +29,10 @@ satisfaction_contact = @psatisfaction_contact,
 rue_contact = @prue_contact
 where id_contact = @pid_contact
 
+CREATE PROCEDURE SearchAllContact
+@pid_contact int
+AS
+select * From Contact where id_contact = @pid_contact
 
 
 

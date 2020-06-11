@@ -251,10 +251,6 @@ namespace ClassLibraryPersistanceSqlServer
                     id = -1
                 };
             }
-
-            
-
-
         }
     }
 }
